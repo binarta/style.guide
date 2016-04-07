@@ -1,0 +1,31 @@
+.bin-title {
+  font-family: @bin-font-sans-serif;
+}
+
+.bin-link {
+  font-family: @bin-font-sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  color: @bin-primary;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: @bin-primary-dark;
+  }
+}
+
+.bin-link-danger {
+  color: @bin-danger-dark !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: @bin-danger !important;
+  }
+}
