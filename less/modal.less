@@ -1,0 +1,35 @@
+.bin-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @bin-z-index-modal;
+
+  &:before {
+    content: ' ';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: fade(@bin-black, 70%);
+    animation: fadeIn 600ms;
+  }
+
+  .bin-modal-body {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    padding: 50px;
+    text-align: center;
+    color: @bin-text-color-lighter;
+    transform: translateY(-50%);
+    animation: binFadeIn 600ms;
+
+    h3 {
+      color: @bin-text-color-lighter;
+    }
+  }
+}
