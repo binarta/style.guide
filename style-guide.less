@@ -1,0 +1,155 @@
+@import "less/binarta";
+
+#style-guide {
+  margin-bottom: 100px;
+
+  section {
+    margin-bottom: 100px;
+  }
+
+  #colors {
+    .color-block-wrapper {
+      float: left;
+      margin: 0 50px 50px 0;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        width: 20%;
+      }
+
+      .color-block {
+        width: 100%;
+      }
+    }
+
+    .color-block {
+      width: 170px;
+
+      .color-block-main {
+        height: 78px;
+      }
+      .color-block-left, .color-block-right {
+        height: 50px;
+        width: 50%;
+        float: left;
+      }
+
+      .bin-blue {
+        background-color: @bin-blue;
+      }
+      .bin-blue-l {
+        background-color: @bin-blue-light;
+      }
+      .bin-blue-d {
+        background-color: @bin-blue-dark;
+      }
+      .bin-red {
+        background-color: @bin-red;
+      }
+      .bin-red-l {
+        background-color: @bin-red-light;
+      }
+      .bin-red-d {
+        background-color: @bin-red-dark;
+      }
+      .bin-black {
+        background-color: @bin-black;
+      }
+      .bin-black-l {
+        background-color: @bin-black-light;
+      }
+      .bin-black-d {
+        background-color: @bin-black-dark;
+      }
+      .bin-dblue {
+        background-color: @bin-dblue;
+      }
+      .bin-dblue-l {
+        background-color: @bin-dblue-light;
+      }
+      .bin-dblue-d {
+        background-color: @bin-dblue-dark;
+      }
+      .bin-gray-darker {
+        background-color: @bin-gray-darker;
+      }
+      .bin-gray-dark {
+        background-color: @bin-gray-dark;
+      }
+      .bin-gray {
+        background-color: @bin-gray;
+      }
+      .bin-gray-light {
+        background-color: @bin-gray-light;
+      }
+      .bin-gray-lighter {
+        background-color: @bin-gray-lighter;
+      }
+    }
+  }
+
+  #backgrounds {
+    .background-block-wrapper {
+      float: left;
+      margin: 0 50px 50px 0;
+    }
+
+    .background-block {
+      width: 270px;
+      height: 128px;
+      border: 2px inset #3B3D40;
+      border-radius: 1px;
+      position: relative;
+
+      .background-block-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.bin-light-bg {
+        background-color: @bin-gray-light;
+      }
+      &.bin-dark-bg {
+        background-color: @bin-dblue-dark;
+      }
+
+      .bin-dark-overlay-bg {
+        background-color: @bin-dblue-dark;
+        opacity: 0.7;
+      }
+      .bin-light-overlay-bg {
+        background-color: @bin-dblue-dark;
+        opacity: 0.5;
+      }
+      .bin-gradient-overlay-bg {
+        background-color: @bin-dblue-dark;
+        background: linear-gradient(to right, @bin-dblue, @bin-dblue-dark);
+        opacity: 0.85;
+      }
+    }
+  }
+
+  #fonts {
+    .font {
+      &.sans-serif {
+        font-family: @bin-font-sans-serif;
+        font-weight: bold;
+      }
+      &.serif {
+        font-family: @bin-font-serif;
+      }
+    }
+  }
+
+  #buttons {
+    .button-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+}
