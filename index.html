@@ -286,12 +286,21 @@
                     <hr>
 
                     <div class="bin-dropdown">
-                        <button type="button" class="bin-btn bin-btn-primary" data-toggle="dropdown">
+                        <button type="button" id="bin-dropdown" class="bin-btn bin-btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             menu <i class="fa fa-caret-down"></i>
                         </button>
-                        <ul>
+                        <ul aria-labelledby="bin-dropdown">
                             <li><a class="bin-link" href=" ">item 1</a></li>
                             <li class="active"><a class="bin-link" href=" ">active</a></li>
+                            <li><a class="bin-link bin-link-danger" href=" ">danger</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bin-dropdown">
+                        <button type="button" class="bin-btn bin-btn-down bin-btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <ul>
+                            <li><a href=" ">item 1</a></li>
+                            <li class="active"><a href=" ">active</a></li>
                             <li><a class="bin-link bin-link-danger" href=" ">danger</a></li>
                         </ul>
                     </div>
@@ -301,6 +310,7 @@
     </div>
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
