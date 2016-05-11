@@ -1,6 +1,7 @@
 .bin-btn {
   font-family: @bin-font-sans-serif;
   font-size: 11px;
+  line-height: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 14px 28px;
@@ -20,6 +21,7 @@
   &:active,
   &.active {
     color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -127,23 +129,22 @@ button {
 
 .bin-btn-up {
   &:before {
-    top: 24px - 3px;
-    left: 24px - 6px;
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #fff transparent;
-  }
-
-  &.active:before {
-    transform: rotateX(180deg);
   }
 }
 
 .bin-btn-down {
   &:before {
-    top: 24px - 3px;
-    left: 24px - 6px;
     border-width: 6px 6px 0 6px;
     border-color: #fff transparent transparent transparent;
+  }
+}
+
+.bin-btn-up, .bin-btn-down {
+  &:before {
+    top: 24px - 3px;
+    left: 24px - 6px;
   }
 
   &.active:before {
@@ -152,6 +153,20 @@ button {
 }
 
 .bin-btn-left {
+  &:before {
+    border-width: 6px 6px 6px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}
+
+.bin-btn-right {
+  &:before {
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #fff;
+  }
+}
+
+.bin-btn-left, .bin-btn-right {
   &:before {
     top: 24px - 6px;
     left: 24px - 3px;
@@ -164,16 +179,45 @@ button {
   }
 }
 
-.bin-btn-right {
-  &:before {
-    top: 24px - 6px;
-    left: 24px - 3px;
-    border-width: 6px 0 6px 6px;
-    border-color: transparent transparent transparent #fff;
+.open {
+  >.bin-btn-floated, >.bin-btn-up, >.bin-btn-down, >.bin-btn-left, >.bin-btn-right {
+    .bin-btn-floated.active;
   }
 
-  &.active:before {
-    transform: rotateY(180deg);
+  >.bin-btn-default {
+    .bin-btn-default.active;
+  }
+
+  >.bin-btn-primary {
+    .bin-btn-primary.active;
+  }
+
+  >.bin-btn-success {
+    .bin-btn-success.active;
+  }
+
+  >.bin-btn-info {
+    .bin-btn-info.active;
+  }
+
+  >.bin-btn-warning {
+    .bin-btn-warning.active;
+  }
+
+  >.bin-btn-danger {
+    .bin-btn-danger.active;
+  }
+
+  >.bin-btn-up, >.bin-btn-down {
+    &:before {
+      transform: rotateX(180deg);
+    }
+  }
+
+  >.bin-btn-left, >.bin-btn-right {
+    &:before {
+      transform: rotateY(180deg);
+    }
   }
 }
 
