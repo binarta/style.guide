@@ -21,7 +21,7 @@ function CopyIndex() {
 }
 
 function WatchTask() {
-    livereload.listen();
+    livereload.listen(4001);
 
     gulp.watch('**/*.less', ['less']);
     gulp.watch('index.html', ['index']);
