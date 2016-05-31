@@ -1,6 +1,7 @@
 .bin-dropdown {
   display: inline-block;
   position: relative;
+  z-index: 1;
 
   ul {
     display: none;
@@ -10,21 +11,23 @@
     position: absolute;
     top: 100%;
     right: 0;
-    min-width: 120px;
     background-color: #fff;
     box-shadow: @bin-box-shadow;
 
     li {
       font-family: @bin-font-sans-serif;
       letter-spacing: 1px;
+      min-width: 120px;
 
-      a {
+      a, button {
         font-size: 11px;
         display: inline-block;
         padding: 12px 24px;
+        width: 100%;
         color: @bin-gray-darker;
         text-transform: uppercase;
         text-decoration: none;
+        text-align: left;
       }
 
       &.active {
