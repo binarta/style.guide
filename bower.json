@@ -4,7 +4,6 @@
     "./less/binarta.less"
   ],
   "dependencies": {},
-  "devDependencies": {},
   "ignore": [
     "**/.*",
     "node_modules",

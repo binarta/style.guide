@@ -46,6 +46,12 @@
 
 @bin-box-shadow:              0 2px 4px 0 fade(@bin-gray, 50%);
 
+@bin-btn-line-height:         13px;
+@bin-btn-padding-top-bottom:  14px;
+@bin-btn-padding-left-right:  @bin-btn-min-height / 2;
+@bin-btn-min-height:          @bin-btn-line-height + (@bin-btn-padding-top-bottom * 2);
+
+@bin-z-index-ui:              1000;
 @bin-z-index-modal:           1050;
 //@bin-z-index-mce-fullscreen:  1045;
 //@bin-z-index-backdrop:        1040;
@@ -53,3 +59,10 @@
 //@bin-z-index-cookie-notice:   1034;
 //@bin-z-index-intercom:        1034;
 //@bin-z-index-to-top:          1030;
+
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);

@@ -1,12 +1,15 @@
+@import "variables";
+
 .bin-btn {
   font-family: @bin-font-sans-serif;
   font-size: 11px;
-  line-height: 13px;
+  line-height: @bin-btn-line-height;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 14px 28px;
+  padding: @bin-btn-padding-top-bottom @bin-btn-padding-left-right;
+  min-height: @bin-btn-min-height;
   border: none;
-  border-radius: 40px;
+  border-radius: @bin-btn-min-height;
   color: #fff;
   vertical-align: middle;
   outline: none;
@@ -37,7 +40,7 @@ button {
   box-shadow: @bin-box-shadow;
   transition-timing-function: ease;
   transition-duration: 60ms;
-  transition-property: transform, box-shadow, background-color, color;
+  transition-property: transform, box-shadow, background-color, color, padding;
 
 
   &:active,
@@ -110,10 +113,6 @@ button {
 }
 
 .bin-btn-up, .bin-btn-down, .bin-btn-left, .bin-btn-right {
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border-radius: 50%;
   position: relative;
 
   &:before {
@@ -124,6 +123,9 @@ button {
     border-style: solid;
 
     transition: transform ease 120ms;
+  }
+  &:not(:empty) {
+    padding-right: @bin-btn-padding-left-right * 1.6;
   }
 }
 
@@ -143,8 +145,8 @@ button {
 
 .bin-btn-up, .bin-btn-down {
   &:before {
-    top: 24px - 3px;
-    left: 24px - 6px;
+    top: (@bin-btn-min-height / 2) - 3px;
+    right: @bin-btn-padding-left-right - 6px;
   }
 
   &.active:before {
@@ -168,8 +170,8 @@ button {
 
 .bin-btn-left, .bin-btn-right {
   &:before {
-    top: 24px - 6px;
-    left: 24px - 3px;
+    top: (@bin-btn-min-height / 2) - 6px;
+    right: @bin-btn-padding-left-right - 3px;
     border-width: 6px 6px 6px 0;
     border-color: transparent #fff transparent transparent;
   }
