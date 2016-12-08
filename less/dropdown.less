@@ -20,17 +20,21 @@
     li {
       font-family: @bin-font-sans-serif;
       letter-spacing: 1px;
-      min-width: 120px;
 
       a, button {
         font-size: 11px;
         display: inline-block;
         padding: 12px 24px;
         width: 100%;
+        min-width: 120px;
+        max-width: 200px;
         color: @bin-gray-darker;
         text-transform: uppercase;
         text-decoration: none;
-        text-align: right;
+        text-overflow: ellipsis;
+        text-align: left;
+        overflow: auto;
+        white-space: nowrap;
       }
 
       &.active {
