@@ -1,8 +1,5 @@
 {
   "name": "binarta.style.guide",
-  "main": [
-    "./less/binarta.less"
-  ],
   "dependencies": {},
   "ignore": [
     "**/.*",
