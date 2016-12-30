@@ -5,7 +5,7 @@
   position: relative;
   z-index: @bin-z-index-ui;
 
-  ul {
+  ul, .bin-dropdown-menu {
     display: none;
     list-style: none;
     margin: 3px 0 0 0;
@@ -17,7 +17,7 @@
     box-shadow: @bin-box-shadow;
     z-index: @bin-z-index-ui;
 
-    li {
+    li, .bin-dropdown-menu-item {
       font-family: @bin-font-sans-serif;
       letter-spacing: 1px;
 
@@ -44,7 +44,7 @@
   }
 
   &.open {
-    ul {
+    ul, .bin-dropdown-menu {
       display: block;
     }
   }
@@ -52,8 +52,8 @@
 
 body:not(.mobile):not(.tablet) {
   .bin-dropdown {
-    ul {
-      li {
+    ul, .bin-dropdown-menu {
+      li, .bin-dropdown-menu-item {
         &:hover:not(.active) {
           background-color: @bin-gray-lighter;
         }
