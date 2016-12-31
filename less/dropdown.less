@@ -35,6 +35,11 @@
         text-align: left;
         overflow: auto;
         white-space: nowrap;
+
+        &.disabled,
+        &[disabled] {
+          color: @bin-gray;
+        }
       }
 
       &.active {
