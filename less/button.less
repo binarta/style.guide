@@ -26,6 +26,13 @@
     color: #fff;
     text-decoration: none;
   }
+
+  &.bin-btn-sm {
+    font-size: 10px;
+    padding: @bin-btn-padding-top-bottom-sm @bin-btn-padding-left-right-sm;
+    min-height: @bin-btn-min-height-sm;
+    border-radius: @bin-btn-min-height-sm;
+  }
 }
 
 button {
@@ -42,10 +49,9 @@ button {
   transition-duration: 60ms;
   transition-property: transform, box-shadow, background-color, color, padding;
 
-
   &:active,
   &.active {
-    transform: scale(0.99,0.99) translateY(1px);
+    transform: scale(0.99,0.99);
     box-shadow: none;
   }
 }
@@ -121,7 +127,6 @@ button {
     width: 0;
     height: 0;
     border-style: solid;
-
     transition: transform ease 120ms;
   }
   &:not(:empty) {
@@ -134,12 +139,24 @@ button {
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #fff transparent;
   }
+
+  &.bin-btn-default {
+    &:before {
+      border-bottom-color: @bin-gray-dark;
+    }
+  }
 }
 
 .bin-btn-down {
   &:before {
     border-width: 6px 6px 0 6px;
     border-color: #fff transparent transparent transparent;
+  }
+
+  &.bin-btn-default {
+    &:before {
+      border-top-color: @bin-gray-dark;
+    }
   }
 }
 
@@ -149,8 +166,11 @@ button {
     right: @bin-btn-padding-left-right - 6px;
   }
 
-  &.active:before {
-    transform: rotateX(180deg);
+  &.bin-btn-sm {
+    &:before {
+      top: (@bin-btn-min-height-sm / 2) - 3px;
+      right: @bin-btn-padding-left-right-sm - 6px;
+    }
   }
 }
 
@@ -159,12 +179,24 @@ button {
     border-width: 6px 6px 6px 0;
     border-color: transparent #fff transparent transparent;
   }
+
+  &.bin-btn-default {
+    &:before {
+      border-right-color: @bin-gray-dark;
+    }
+  }
 }
 
 .bin-btn-right {
   &:before {
     border-width: 6px 0 6px 6px;
     border-color: transparent transparent transparent #fff;
+  }
+
+  &.bin-btn-default {
+    &:before {
+      border-left-color: @bin-gray-dark;
+    }
   }
 }
 
@@ -176,8 +208,17 @@ button {
     border-color: transparent #fff transparent transparent;
   }
 
-  &.active:before {
-    transform: rotateY(180deg);
+  &.bin-btn-default {
+    &:before {
+      border-color: transparent @bin-gray-dark transparent transparent;
+    }
+  }
+
+  &.bin-btn-sm {
+    &:before {
+      top: (@bin-btn-min-height-sm / 2) - 6px;
+      right: @bin-btn-padding-left-right-sm - 3px;
+    }
   }
 }
 
@@ -208,18 +249,6 @@ button {
 
   >.bin-btn-danger {
     .bin-btn-danger.active;
-  }
-
-  >.bin-btn-up, >.bin-btn-down {
-    &:before {
-      transform: rotateX(180deg);
-    }
-  }
-
-  >.bin-btn-left, >.bin-btn-right {
-    &:before {
-      transform: rotateY(180deg);
-    }
   }
 }
 
